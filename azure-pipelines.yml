@@ -18,5 +18,5 @@ steps:
 - script: npm install
   displayName: 'Install'
 
-- script: npm lint
+- script: npm run lint
   displayName: 'Lint'
