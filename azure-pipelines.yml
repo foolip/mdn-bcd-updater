@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- deploy-to-gh-pages
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -23,3 +23,5 @@ steps:
 
 - script: npm run build
   displayName: 'Build'
+
+- script: env
