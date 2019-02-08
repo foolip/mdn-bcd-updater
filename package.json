@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "webidl2": "^17.0.1"
+  },
+  "scripts": {
+    "lint": "npx eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-google": "^0.12.0"
   }
 }
