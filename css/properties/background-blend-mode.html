@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(background-blend-mode: initial) {
+  body { background: green; }
+}
+@supports not (background-blend-mode: initial) {
+  body { background: red; }
+}
+</style>

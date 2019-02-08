@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(flow-into: initial) {
+  body { background: green; }
+}
+@supports not (flow-into: initial) {
+  body { background: red; }
+}
+</style>

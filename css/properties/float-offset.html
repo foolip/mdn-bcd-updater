@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(float-offset: initial) {
+  body { background: green; }
+}
+@supports not (float-offset: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(mask-composite: initial) {
+  body { background: green; }
+}
+@supports not (mask-composite: initial) {
+  body { background: red; }
+}
+</style>

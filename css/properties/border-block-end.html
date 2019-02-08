@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(border-block-end: initial) {
+  body { background: green; }
+}
+@supports not (border-block-end: initial) {
+  body { background: red; }
+}
+</style>

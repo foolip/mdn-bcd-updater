@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(inset-after: initial) {
+  body { background: green; }
+}
+@supports not (inset-after: initial) {
+  body { background: red; }
+}
+</style>

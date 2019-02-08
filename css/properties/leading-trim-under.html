@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(leading-trim-under: initial) {
+  body { background: green; }
+}
+@supports not (leading-trim-under: initial) {
+  body { background: red; }
+}
+</style>

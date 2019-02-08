@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(float-reference: initial) {
+  body { background: green; }
+}
+@supports not (float-reference: initial) {
+  body { background: red; }
+}
+</style>

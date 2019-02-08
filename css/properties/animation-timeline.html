@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(animation-timeline: initial) {
+  body { background: green; }
+}
+@supports not (animation-timeline: initial) {
+  body { background: red; }
+}
+</style>

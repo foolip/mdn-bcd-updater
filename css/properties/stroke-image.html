@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(stroke-image: initial) {
+  body { background: green; }
+}
+@supports not (stroke-image: initial) {
+  body { background: red; }
+}
+</style>

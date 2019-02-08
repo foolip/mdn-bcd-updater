@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(mask-border-width: initial) {
+  body { background: green; }
+}
+@supports not (mask-border-width: initial) {
+  body { background: red; }
+}
+</style>

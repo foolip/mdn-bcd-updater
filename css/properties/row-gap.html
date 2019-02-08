@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(row-gap: initial) {
+  body { background: green; }
+}
+@supports not (row-gap: initial) {
+  body { background: red; }
+}
+</style>

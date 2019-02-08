@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(scroll-margin-inline-start: initial) {
+  body { background: green; }
+}
+@supports not (scroll-margin-inline-start: initial) {
+  body { background: red; }
+}
+</style>

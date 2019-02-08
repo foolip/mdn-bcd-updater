@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(bookmark-state: initial) {
+  body { background: green; }
+}
+@supports not (bookmark-state: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(z-index: initial) {
+  body { background: green; }
+}
+@supports not (z-index: initial) {
+  body { background: red; }
+}
+</style>

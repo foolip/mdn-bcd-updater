@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(shape-rendering: initial) {
+  body { background: green; }
+}
+@supports not (shape-rendering: initial) {
+  body { background: red; }
+}
+</style>

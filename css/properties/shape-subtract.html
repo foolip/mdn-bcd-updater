@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(shape-subtract: initial) {
+  body { background: green; }
+}
+@supports not (shape-subtract: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(color-interpolation: initial) {
+  body { background: green; }
+}
+@supports not (color-interpolation: initial) {
+  body { background: red; }
+}
+</style>

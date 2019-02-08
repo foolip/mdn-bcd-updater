@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(translate: initial) {
+  body { background: green; }
+}
+@supports not (translate: initial) {
+  body { background: red; }
+}
+</style>

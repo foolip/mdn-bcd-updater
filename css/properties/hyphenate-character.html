@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(hyphenate-character: initial) {
+  body { background: green; }
+}
+@supports not (hyphenate-character: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(shape-inside: initial) {
+  body { background: green; }
+}
+@supports not (shape-inside: initial) {
+  body { background: red; }
+}
+</style>

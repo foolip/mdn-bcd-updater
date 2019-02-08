@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(offset-path: initial) {
+  body { background: green; }
+}
+@supports not (offset-path: initial) {
+  body { background: red; }
+}
+</style>

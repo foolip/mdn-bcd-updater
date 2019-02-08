@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(block-step-round: initial) {
+  body { background: green; }
+}
+@supports not (block-step-round: initial) {
+  body { background: red; }
+}
+</style>

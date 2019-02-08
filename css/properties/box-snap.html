@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(box-snap: initial) {
+  body { background: green; }
+}
+@supports not (box-snap: initial) {
+  body { background: red; }
+}
+</style>

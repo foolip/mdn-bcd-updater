@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(border-clip-right: initial) {
+  body { background: green; }
+}
+@supports not (border-clip-right: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(column-span: initial) {
+  body { background: green; }
+}
+@supports not (column-span: initial) {
+  body { background: red; }
+}
+</style>

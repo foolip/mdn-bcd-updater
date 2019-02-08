@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(paint-order: initial) {
+  body { background: green; }
+}
+@supports not (paint-order: initial) {
+  body { background: red; }
+}
+</style>

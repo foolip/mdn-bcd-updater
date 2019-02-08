@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(background-position-y: initial) {
+  body { background: green; }
+}
+@supports not (background-position-y: initial) {
+  body { background: red; }
+}
+</style>

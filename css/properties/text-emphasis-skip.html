@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(text-emphasis-skip: initial) {
+  body { background: green; }
+}
+@supports not (text-emphasis-skip: initial) {
+  body { background: red; }
+}
+</style>

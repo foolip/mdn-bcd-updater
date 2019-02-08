@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(flex-basis: initial) {
+  body { background: green; }
+}
+@supports not (flex-basis: initial) {
+  body { background: red; }
+}
+</style>

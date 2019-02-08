@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(stroke-dashcorner: initial) {
+  body { background: green; }
+}
+@supports not (stroke-dashcorner: initial) {
+  body { background: red; }
+}
+</style>

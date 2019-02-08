@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(block-step-insert: initial) {
+  body { background: green; }
+}
+@supports not (block-step-insert: initial) {
+  body { background: red; }
+}
+</style>

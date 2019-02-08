@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(volume: initial) {
+  body { background: green; }
+}
+@supports not (volume: initial) {
+  body { background: red; }
+}
+</style>

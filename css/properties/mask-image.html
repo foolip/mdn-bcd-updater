@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(mask-image: initial) {
+  body { background: green; }
+}
+@supports not (mask-image: initial) {
+  body { background: red; }
+}
+</style>

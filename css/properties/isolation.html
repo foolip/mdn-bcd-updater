@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(isolation: initial) {
+  body { background: green; }
+}
+@supports not (isolation: initial) {
+  body { background: red; }
+}
+</style>

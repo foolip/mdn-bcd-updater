@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(corner-shape: initial) {
+  body { background: green; }
+}
+@supports not (corner-shape: initial) {
+  body { background: red; }
+}
+</style>

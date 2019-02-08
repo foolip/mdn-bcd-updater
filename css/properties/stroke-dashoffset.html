@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(stroke-dashoffset: initial) {
+  body { background: green; }
+}
+@supports not (stroke-dashoffset: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(line-snap: initial) {
+  body { background: green; }
+}
+@supports not (line-snap: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(border-end-start-radius: initial) {
+  body { background: green; }
+}
+@supports not (border-end-start-radius: initial) {
+  body { background: red; }
+}
+</style>

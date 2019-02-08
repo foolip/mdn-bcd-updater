@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(offset-rotate: initial) {
+  body { background: green; }
+}
+@supports not (offset-rotate: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(region-fragment: initial) {
+  body { background: green; }
+}
+@supports not (region-fragment: initial) {
+  body { background: red; }
+}
+</style>

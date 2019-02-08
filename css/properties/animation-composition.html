@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(animation-composition: initial) {
+  body { background: green; }
+}
+@supports not (animation-composition: initial) {
+  body { background: red; }
+}
+</style>

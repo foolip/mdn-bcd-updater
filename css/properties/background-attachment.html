@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(background-attachment: initial) {
+  body { background: green; }
+}
+@supports not (background-attachment: initial) {
+  body { background: red; }
+}
+</style>

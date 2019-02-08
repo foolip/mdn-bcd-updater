@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(string-set: initial) {
+  body { background: green; }
+}
+@supports not (string-set: initial) {
+  body { background: red; }
+}
+</style>

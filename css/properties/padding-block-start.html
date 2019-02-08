@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(padding-block-start: initial) {
+  body { background: green; }
+}
+@supports not (padding-block-start: initial) {
+  body { background: red; }
+}
+</style>

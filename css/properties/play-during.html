@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(play-during: initial) {
+  body { background: green; }
+}
+@supports not (play-during: initial) {
+  body { background: red; }
+}
+</style>

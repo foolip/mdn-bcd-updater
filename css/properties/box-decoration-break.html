@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(box-decoration-break: initial) {
+  body { background: green; }
+}
+@supports not (box-decoration-break: initial) {
+  body { background: red; }
+}
+</style>

@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(grid-template-rows: initial) {
+  body { background: green; }
+}
+@supports not (grid-template-rows: initial) {
+  body { background: red; }
+}
+</style>

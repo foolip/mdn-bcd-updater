@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(flex-grow: initial) {
+  body { background: green; }
+}
+@supports not (flex-grow: initial) {
+  body { background: red; }
+}
+</style>

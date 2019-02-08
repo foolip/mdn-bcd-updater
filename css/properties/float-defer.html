@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(float-defer: initial) {
+  body { background: green; }
+}
+@supports not (float-defer: initial) {
+  body { background: red; }
+}
+</style>

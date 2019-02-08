@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(hyphenate-limit-lines: initial) {
+  body { background: green; }
+}
+@supports not (hyphenate-limit-lines: initial) {
+  body { background: red; }
+}
+</style>

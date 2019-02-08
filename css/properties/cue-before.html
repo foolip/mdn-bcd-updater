@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(cue-before: initial) {
+  body { background: green; }
+}
+@supports not (cue-before: initial) {
+  body { background: red; }
+}
+</style>

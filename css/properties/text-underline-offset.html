@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(text-underline-offset: initial) {
+  body { background: green; }
+}
+@supports not (text-underline-offset: initial) {
+  body { background: red; }
+}
+</style>

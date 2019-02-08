@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(fill-image: initial) {
+  body { background: green; }
+}
+@supports not (fill-image: initial) {
+  body { background: red; }
+}
+</style>

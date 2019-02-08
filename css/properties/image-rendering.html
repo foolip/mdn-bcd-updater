@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(image-rendering: initial) {
+  body { background: green; }
+}
+@supports not (image-rendering: initial) {
+  body { background: red; }
+}
+</style>

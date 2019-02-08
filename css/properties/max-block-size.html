@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(max-block-size: initial) {
+  body { background: green; }
+}
+@supports not (max-block-size: initial) {
+  body { background: red; }
+}
+</style>

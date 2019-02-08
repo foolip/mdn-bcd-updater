@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(counter-reset: initial) {
+  body { background: green; }
+}
+@supports not (counter-reset: initial) {
+  body { background: red; }
+}
+</style>

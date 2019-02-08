@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(flex-direction: initial) {
+  body { background: green; }
+}
+@supports not (flex-direction: initial) {
+  body { background: red; }
+}
+</style>

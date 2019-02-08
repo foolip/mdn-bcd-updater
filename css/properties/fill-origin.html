@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(fill-origin: initial) {
+  body { background: green; }
+}
+@supports not (fill-origin: initial) {
+  body { background: red; }
+}
+</style>

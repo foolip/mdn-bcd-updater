@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(backdrop-filter: initial) {
+  body { background: green; }
+}
+@supports not (backdrop-filter: initial) {
+  body { background: red; }
+}
+</style>

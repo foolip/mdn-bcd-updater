@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(stroke-dasharray: initial) {
+  body { background: green; }
+}
+@supports not (stroke-dasharray: initial) {
+  body { background: red; }
+}
+</style>

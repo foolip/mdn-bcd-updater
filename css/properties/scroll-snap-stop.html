@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(scroll-snap-stop: initial) {
+  body { background: green; }
+}
+@supports not (scroll-snap-stop: initial) {
+  body { background: red; }
+}
+</style>

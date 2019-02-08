@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(inset-block: initial) {
+  body { background: green; }
+}
+@supports not (inset-block: initial) {
+  body { background: red; }
+}
+</style>

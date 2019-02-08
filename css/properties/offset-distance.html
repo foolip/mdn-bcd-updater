@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(offset-distance: initial) {
+  body { background: green; }
+}
+@supports not (offset-distance: initial) {
+  body { background: red; }
+}
+</style>

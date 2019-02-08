@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(border-inline-width: initial) {
+  body { background: green; }
+}
+@supports not (border-inline-width: initial) {
+  body { background: red; }
+}
+</style>

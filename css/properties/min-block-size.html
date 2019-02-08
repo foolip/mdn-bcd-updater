@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(min-block-size: initial) {
+  body { background: green; }
+}
+@supports not (min-block-size: initial) {
+  body { background: red; }
+}
+</style>

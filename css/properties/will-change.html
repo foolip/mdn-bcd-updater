@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(will-change: initial) {
+  body { background: green; }
+}
+@supports not (will-change: initial) {
+  body { background: red; }
+}
+</style>

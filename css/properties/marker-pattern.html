@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(marker-pattern: initial) {
+  body { background: green; }
+}
+@supports not (marker-pattern: initial) {
+  body { background: red; }
+}
+</style>

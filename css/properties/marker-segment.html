@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(marker-segment: initial) {
+  body { background: green; }
+}
+@supports not (marker-segment: initial) {
+  body { background: red; }
+}
+</style>

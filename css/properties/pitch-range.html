@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(pitch-range: initial) {
+  body { background: green; }
+}
+@supports not (pitch-range: initial) {
+  body { background: red; }
+}
+</style>

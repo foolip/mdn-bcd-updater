@@ -1,0 +1,9 @@
+<!doctype html>
+<style>
+@supports(pause-before: initial) {
+  body { background: green; }
+}
+@supports not (pause-before: initial) {
+  body { background: red; }
+}
+</style>
