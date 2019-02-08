@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "fs-extra": "^7.0.1",
+    "reffy-reports": "git://github.com/foolip/reffy-reports.git#mdn-bcd-updater-fixes",
     "webidl2": "^17.0.1"
   },
   "scripts": {
-    "postinstall": "git clone --branch mdn-bcd-updater-fixes https://github.com/foolip/reffy-reports.git",
     "build": "node build",
     "lint": "npx eslint *.js"
   },

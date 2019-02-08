@@ -4,7 +4,7 @@
 
 const fs = require('fs-extra');
 
-const CSS_DIR = `${__dirname}/reffy-reports/whatwg/css`;
+const CSS_DIR = `${__dirname}/node_modules/reffy-reports/whatwg/css`;
 const OUT_DIR = `${__dirname}/out`;
 
 async function buildCSS() {
