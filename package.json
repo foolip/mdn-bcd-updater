@@ -1,9 +1,12 @@
 {
   "dependencies": {
+    "fs-extra": "^7.0.1",
     "webidl2": "^17.0.1"
   },
   "scripts": {
-    "lint": "npx eslint ."
+    "postinstall": "git clone --branch mdn-bcd-updater-fixes https://github.com/foolip/reffy-reports.git",
+    "build": "node build",
+    "lint": "npx eslint *.js"
   },
   "devDependencies": {
     "eslint": "^5.13.0",

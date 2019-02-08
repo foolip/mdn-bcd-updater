@@ -20,3 +20,6 @@ steps:
 
 - script: npm run lint
   displayName: 'Lint'
+
+- script: npm run build
+  displayName: 'Build'
