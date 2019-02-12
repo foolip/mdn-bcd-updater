@@ -2,7 +2,9 @@
   "dependencies": {
     "fs-extra": "^7.0.1",
     "reffy-reports": "git://github.com/foolip/reffy-reports.git#mdn-bcd-updater-fixes",
-    "webidl2": "^17.0.1"
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "webidl2": "^17.0.1",
+    "yargs": "^11.1.0"
   },
   "scripts": {
     "build": "node build",
