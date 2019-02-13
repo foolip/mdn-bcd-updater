@@ -1,4 +1,8 @@
 {
+  "name": "mdn-bcd-updater",
+  "version": "0.0.1",
+  "description": "Ad-hoc scripts for updating mdn/browser-compat-data",
+  "repository": "https://github.com/foolip/mdn-bcd-updater",
   "dependencies": {
     "fs-extra": "^7.0.1",
     "reffy-reports": "git://github.com/foolip/reffy-reports.git#mdn-bcd-updater-fixes",
