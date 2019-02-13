@@ -8,27 +8,6 @@ const readFile = util.promisify(fs.readFile);
 
 const WebIDL2 = require('webidl2');
 
-// eslint-disable-next-line no-unused-vars
-function verify(idl) {
-  try {
-    WebIDL2.parse(idl);
-  } catch (e) {
-    console.error(e);
-    return false;
-  }
-  return true;
-}
-
-function verify(idl) {
-  try {
-    WebIDL2.parse(idl);
-  } catch (e) {
-    console.error(e);
-    return false;
-  }
-  return true;
-}
-
 async function main(path) {
   const idl = await readFile(path, 'utf8');
   let ast = WebIDL2.parse(idl);
@@ -102,18 +81,6 @@ async function main(path) {
           continue;
         }
 
-        // eslint-disable-next-line no-unused-vars
-        let onPrototype = false;
-        if (dfn.type === 'interface' || dfn.type === 'callback interface') {
-          onPrototype = true;
-          if (member.type === 'operation') {
-            if (member.special && member.special.value === 'static') {
-              onPrototype = false;
-            }
-          } else if (member.type === 'const') {
-            onPrototype = false;
-          }
-        }
         console.log(`${dfn.name}.${name}`);
       }
     }
