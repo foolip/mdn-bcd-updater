@@ -13,21 +13,17 @@ const {argv} = require('yargs')
     .help();
 
 async function getBrowserStackDriver(capabilities, auth) {
-  const username = auth.user;
-  const accessKey = auth.key;
   const driver = await new webdriver.Builder()
-      .withCapabilities(Object.assign({username, accessKey}, capabilities))
-      .usingServer(`https://${username}:${accessKey}@hub-cloud.browserstack.com:443/wd/hub`)
+      .withCapabilities(capabilities)
+      .usingServer(`https://${auth.user}:${auth.key}@hub-cloud.browserstack.com:443/wd/hub`)
       .build();
   return driver;
 }
 
 async function getSauceDriver(capabilities, auth) {
-  const username = auth.user;
-  const accessKey = auth.key;
   const driver = await new webdriver.Builder()
-      .withCapabilities(Object.assign({username, accessKey}, capabilities))
-      .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
+      .withCapabilities(capabilities)
+      .usingServer(`https://${auth.user}:${auth.key}@ondemand.saucelabs.com:443/wd/hub`)
       .build();
   return driver;
 }
