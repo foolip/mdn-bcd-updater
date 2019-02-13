@@ -1,8 +1,13 @@
 {
   "name": "mdn-bcd-updater",
-  "version": "0.0.1",
   "description": "Ad-hoc scripts for updating mdn/browser-compat-data",
-  "repository": "https://github.com/foolip/mdn-bcd-updater",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foolip/mdn-bcd-updater.git"
+  },
   "dependencies": {
     "browserstack": "^1.5.2",
     "fs-extra": "^7.0.1",
