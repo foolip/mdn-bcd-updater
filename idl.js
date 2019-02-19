@@ -2,17 +2,27 @@
 
 'use strict';
 
-const util = require('util');
-const fs = require('fs');
-const readFile = util.promisify(fs.readFile);
-
+const fs = require('fs-extra');
 const WebIDL2 = require('webidl2');
 
-async function main(path) {
-  const idl = await readFile(path, 'utf8');
-  let ast = WebIDL2.parse(idl);
-  // console.log(tree);
-  // console.log(WebIDL2.write(tree));
+async function main(paths) {
+  if (!paths.length) {
+    // Default to reading all IDL files from reffy-reports
+    const IDL_DIR = `${__dirname}/node_modules/reffy-reports/whatwg/idl`;
+    const idlFiles = await fs.readdir(IDL_DIR);
+    idlFiles.sort();
+    paths = idlFiles
+        .filter(file => file.endsWith('.idl'))
+        .map(file => `${IDL_DIR}/${file}`);
+  }
+
+  let ast = [];
+
+  for (const path of paths) {
+    const idl = await fs.readFile(path, 'utf8');
+    ast.push(...WebIDL2.parse(idl));
+  }
+  // console.log(WebIDL2.write(ast));
 
   // merge partials (O^2 but still fast)
   ast = ast.filter((dfn) => {
@@ -87,4 +97,4 @@ async function main(path) {
   }
 }
 
-main(process.argv[2]);
+main(process.argv.slice(2));
