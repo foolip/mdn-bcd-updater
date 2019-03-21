@@ -3,6 +3,7 @@
 'use strict';
 
 const fs = require('fs-extra');
+const stringify = require('json-stable-stringify');
 const WebIDL2 = require('webidl2');
 
 async function main(paths) {
@@ -43,6 +44,22 @@ async function main(paths) {
     return false;
   });
 
+  // https://github.com/mdn/browser-compat-data/issues/472#issuecomment-473335570
+  const interfaceData = {};
+  for (const dfn of ast) {
+    if (dfn.type !== 'interface') {
+      continue;
+    }
+    if (dfn.name in interfaceData) {
+      throw new Error(`Duplicate definition of interface ${dfn.name}`);
+    }
+    const data = {};
+    if (dfn.inheritance) {
+      data.inherits = dfn.inheritance.name;
+    }
+    interfaceData[dfn.name] = data;
+  }
+
   // mix in the mixins
   for (const dfn of ast) {
     if (dfn.type === 'includes') {
@@ -59,6 +76,13 @@ async function main(paths) {
       if (!target) {
         // eslint-disable-next-line max-len
         throw new Error(`Target ${dfn.target} not found for interface mixin ${dfn.includes}`);
+      }
+
+      if (interfaceData[target.name].includes) {
+        interfaceData[target.name].includes.push(mixin.name);
+        interfaceData[target.name].includes.sort();
+      } else {
+        interfaceData[target.name].includes = [mixin.name];
       }
 
       // move members to target interface
@@ -91,10 +115,12 @@ async function main(paths) {
           continue;
         }
 
-        console.log(`${dfn.name}.${name}`);
+        //console.log(`${dfn.name}.${name}`);
       }
     }
   }
+
+  console.log(stringify(interfaceData, {space: '  '}));
 }
 
 main(process.argv.slice(2));
